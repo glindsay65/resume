@@ -1,0 +1,48 @@
+{{! views/partials/section.hbs
+
+	Copyright 2017 Fast Dog Coding, LLC
+
+	Licensed under the Apache License, Version 2.0 (the "License"); you may not
+	use this file except in compliance with the License. You may obtain a copy
+	of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+	WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+	License for the specific language governing permissions and limitations
+	under the License.
+}}
+{{!
+ Uses bootstrap "cards" to layout the resume sections. Each section's content varies and the layout
+ is handled with the appropriate handlebars partial by "type".
+}}
+<div class="card mb-3">
+	<h4 class="card-header">{{heading}}</h4>
+	<div class="card-body">
+		{{#if title}}
+			<h6 class="card-title text-muted mb-0">{{{title}}}</h6>
+		{{/if}}
+		{{#content}}
+			{{!
+				For each object in content, load it with the handlebars partial
+			  that has the same name as the value in the content object's
+			  type property.
+
+			  e.g., if we have:
+
+				  "content": [{
+				    "type": "fooBar"
+				  }]
+
+				The following line will look for the partial from the file,
+				"views/partials/fooBar.hbs" and will render it with the data
+				in the current object in the content array.
+			}}
+			{{> (lookup . 'type')}}
+		{{else}}
+			<p class="alert alert-info mb-0 mt-3">Content not ready, yet</p>
+		{{/content}}
+	</div>
+</div>

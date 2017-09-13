@@ -1,0 +1,9 @@
+applications:
+- name: udemy-resume
+  memory: 512M
+  instances: 1
+  path: .
+  domain: mybluemix.net
+  host: udemy-resume-fdc
+  disk_quota: 512M
+  buildpack: nodejs_buildpack
