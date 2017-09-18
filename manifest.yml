@@ -1,9 +1,10 @@
 applications:
-- name: udemy-resume
+- name: resume
   memory: 512M
   instances: 1
   path: .
-  domain: mybluemix.net
-  host: udemy-resume-fdc
+  routes:
+    - route: resume-fdc.mybluemix.net
+    - route: resume.fastdogcoding.net
   disk_quota: 512M
   buildpack: nodejs_buildpack

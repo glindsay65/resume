@@ -35,3 +35,7 @@ body {
 .cryptedmail:after {
     content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
+
+.cryptedphone:after {
+    content: "(" attr(data-areacode) ") " attr(data-exchange) "-" attr(data-number);
+}
