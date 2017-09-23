@@ -15,22 +15,23 @@
 	under the License.
 }}
 <div class="card skills">
-	<div class="card-body">
-		<h5 class="card-title">{{{title}}}</h5>
-		<div class="row">
-			<div class="col">
-				<p class="text-left">
-					<small>learning</small>
-				</p>
-			</div>
-			<div class="col">
-				<p class="text-right">
-					<small>guru</small>
-				</p>
-			</div>
-		</div>
 
+	<div class="card-body">
+		<h5 class="card-title mb-0">{{{title}}}</h5>
 		{{#if skills}}
+			<div class="row">
+				<div class="col-sm-4 hide-xs"></div>
+				<div class="col-6 col-sm-4">
+					<p class="text-left mb-0">
+						<small>learning</small>
+					</p>
+				</div>
+				<div class="col-6 col-sm-4">
+					<p class="text-right mb-0">
+						<small>guru</small>
+					</p>
+				</div>
+			</div>
 			{{> progress}}
 		{{else}}
 			<p class="alert alert-info mb-0 mt-3">Content not ready, yet</p>

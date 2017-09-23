@@ -15,13 +15,17 @@
 	under the License.
 }}
 {{#skills}}
-	{{this.name}}
-	<div class="progress">
-		<div class="progress-bar bg-info"
-		     role="progressbar"
-		     style="width: {{this.level}}%; "
-		     aria-valuenow="{{this.level}}"
-		     aria-valuemin="0"
-		     aria-valuemax="100"></div>
+	<div class="row align-items-center">
+		<div class="col-12 col-sm-4">{{this.name}}</div>
+		<div class="col-12 col-sm-8">
+			<div class="progress">
+				<div class="progress-bar bg-info"
+				     role="progressbar"
+				     style="width: {{this.level}}%; "
+				     aria-valuenow="{{this.level}}"
+				     aria-valuemin="0"
+				     aria-valuemax="100"></div>
+			</div>
+		</div>
 	</div>
 {{/skills}}
