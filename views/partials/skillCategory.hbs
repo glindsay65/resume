@@ -14,14 +14,26 @@
 	License for the specific language governing permissions and limitations
 	under the License.
 }}
-<h5 class="text-primary mt-3">{{title}}</h5>
-{{#if content}}
-	<div class="card-group d-flex flex-wrap">
-		{{#content}}
-			{{> (lookup . 'type')}}
-		{{/content}}
-	</div>
-{{else}}
-	<p class="alert alert-info mb-0 mt-3">Content not ready, yet</p>
-{{/if}}
+<div class="card skills">
+	<div class="card-body">
+		<h5 class="card-title">{{{title}}}</h5>
+		<div class="row">
+			<div class="col">
+				<p class="text-left">
+					<small>learning</small>
+				</p>
+			</div>
+			<div class="col">
+				<p class="text-right">
+					<small>guru</small>
+				</p>
+			</div>
+		</div>
 
+		{{#if skills}}
+			{{> progress}}
+		{{else}}
+			<p class="alert alert-info mb-0 mt-3">Content not ready, yet</p>
+		{{/if}}
+	</div>
+</div>

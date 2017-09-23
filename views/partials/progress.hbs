@@ -1,4 +1,4 @@
-{{! views/partials/skillLevel.hbs
+{{! views/partials/progress.hbs
 
 	Copyright 2017 Fast Dog Coding, LLC
 
@@ -14,19 +14,14 @@
 	License for the specific language governing permissions and limitations
 	under the License.
 }}
-<div class="card">
-	<div class="card-body">
-		<h5 class="card-title">{{title}}</h5>
-		{{#if skills}}
-			<ul class="list-unstyled mb-0">
-				{{#skills}}
-					<li>{{this}}</li>
-				{{/skills}}
-			</ul>
-		{{else}}
-			<p class="alert alert-info mb-0 mt-3">Content not ready, yet</p>
-		{{/if}}
+{{#skills}}
+	{{this.name}}
+	<div class="progress">
+		<div class="progress-bar bg-info"
+		     role="progressbar"
+		     style="width: {{this.level}}%; "
+		     aria-valuenow="{{this.level}}"
+		     aria-valuemin="0"
+		     aria-valuemax="100"></div>
 	</div>
-</div>
-
-
+{{/skills}}

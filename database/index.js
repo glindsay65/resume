@@ -114,6 +114,16 @@ function processDocument(doc) {
 				doc.content = newContent;
 			}
 			return Promise.resolve(doc);
+		})
+		.then(doc => {
+			// Reverse sort the skills array, when it shows up
+			if (doc.skills) {
+				doc.skills.sort((a, b) => {
+					// Descending
+					return b.level - a.level;
+				});
+			}
+			return Promise.resolve(doc);
 		});
 }
 
