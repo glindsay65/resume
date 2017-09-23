@@ -20,12 +20,21 @@ body {
 }
 
 .card {
-    min-width: 170px;
+    min-width: 200px;
     flex-grow: 1;
 }
 
-.card.employer, .card.project {
-    min-width: 300px;
+@media (min-width: 576px) {
+    .card.skills {
+        min-width: 400px;
+    }
+    .card.employer, .card.project {
+        min-width: 300px;
+    }
+}
+
+.card.skills .progress-bar {
+    height: 12px;
 }
 
 .list-inline-item.separated:not(:last-child)::after {
