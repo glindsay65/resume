@@ -28,6 +28,7 @@ body {
     .card.skills {
         min-width: 400px;
     }
+
     .card.employer, .card.project {
         min-width: 300px;
     }
@@ -41,10 +42,47 @@ body {
     content: ";";
 }
 
+
 .cryptedmail:after {
     content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
 
 .cryptedphone:after {
     content: "(" attr(data-areacode) ") " attr(data-exchange) "-" attr(data-number);
+}
+
+#goalsChart {
+    width: 100%;
+}
+
+svg text {
+    font-size: 300%;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+path {
+    fill: #ccc;
+    stroke: #333;
+    stroke-width: 2px;
+    transition: fill 250ms linear;
+    transition-delay: 150ms;
+}
+
+path:hover {
+    fill: #999;
+    stroke: #000;
+    transition-delay: 0;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: felt;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
 }
