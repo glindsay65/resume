@@ -1,7 +1,7 @@
 {
-  "name": "bluemix",
-  "version": "0.1.0",
-  "description": "Project for learning to build apps on Bluemix",
+  "name": "resume-application",
+  "version": "0.9.0",
+  "description": "Next generation resume. Show and tell.",
   "main": "app.js",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "Bluemix",
     "Node.js",
     "handlebars",
+    "D3",
     "Cloudant"
   ],
   "author": "Grant Lindsay <grant@fastdogcoding.com> (http://www.fastdogcoding.com)",

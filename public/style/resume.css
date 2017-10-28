@@ -28,6 +28,7 @@ body {
     .card.skills {
         min-width: 400px;
     }
+
     .card.employer, .card.project {
         min-width: 300px;
     }
@@ -41,10 +42,51 @@ body {
     content: ";";
 }
 
+
 .cryptedmail:after {
     content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 }
 
 .cryptedphone:after {
     content: "(" attr(data-areacode) ") " attr(data-exchange) "-" attr(data-number);
+}
+
+#goalsChart {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+svg text {
+    font-size: 300%;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+path {
+    fill: #ccc;
+    stroke: #333;
+    stroke-width: 2px;
+    transition: fill 250ms linear;
+    transition-delay: 150ms;
+}
+
+path:hover {
+    fill: #999;
+    stroke: #000;
+    transition-delay: 0;
+}
+
+div.chartTip {
+    position: absolute;
+    text-align: left;
+    color: #383840;
+    width: 50%;
+    max-width: 250px;
+    height: auto;
+    padding: 5px 10px;
+    background-color: #d8d9da;
+    border: 1px solid #5b5b63;
+    border-radius: 5px;
+    pointer-events: none;
 }

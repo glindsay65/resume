@@ -153,5 +153,7 @@ module.exports = {
 			.then(resume => {
 				return processDocument(resume);
 			});
-	}
+	},
+
+	getDocument
 };

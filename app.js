@@ -50,14 +50,13 @@ app.get('/', (req, res, next) => {
 		.catch(error => next(error));
 });
 
-app.get('/appEnv', (req, res) => {
-	res.status(200)
-		.json(appEnv);
-});
-
-app.get('/env', (req, res) => {
-	res.status(200)
-		.json(process.env);
+app.get('/chart', (req, res, next) => {
+	database.getDocument('chartData-goals')
+		.then(doc => {
+			res.status(200)
+				.json(doc.data);
+		})
+		.catch(error => next(error));
 });
 
 // Error handler
