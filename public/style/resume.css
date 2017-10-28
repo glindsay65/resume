@@ -53,6 +53,8 @@ body {
 
 #goalsChart {
     width: 100%;
+    max-width: 500px;
+    margin: auto;
 }
 
 svg text {
@@ -75,14 +77,16 @@ path:hover {
     transition-delay: 0;
 }
 
-div.tooltip {
+div.chartTip {
     position: absolute;
-    text-align: felt;
-    width: auto;
+    text-align: left;
+    color: #383840;
+    width: 50%;
+    max-width: 250px;
     height: auto;
-    padding: 10px;
-    background: lightsteelblue;
-    border: 0px;
-    border-radius: 8px;
+    padding: 5px 10px;
+    background-color: #d8d9da;
+    border: 1px solid #5b5b63;
+    border-radius: 5px;
     pointer-events: none;
 }
