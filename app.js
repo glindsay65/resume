@@ -17,10 +17,10 @@
 'use strict';
 
 // Required modules
-const express = require('express'),
-  hbs = require('hbs'),
-  cfenv = require('cfenv'),
-  database = require('./database');
+const express = require('express');
+ const hbs = require('hbs');
+ const cfenv = require('cfenv');
+ const database = require('./database');
 
 // create a new express server
 let app = express();
