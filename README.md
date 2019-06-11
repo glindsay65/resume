@@ -12,7 +12,7 @@ At the same time, I also wanted a resume that I felt would be a notch or two abo
 The final result, I feel, delivers several key benefits:
 
 - **Always up-to-date**. Having an online resume available from the same URL gives me the ability to make sure it is always current. If I e-mail or hand-deliver a resume, it is already stale and can never be updated (without sending a new copy, which is itself stale.) Whereas, the link to the Resume Application always points to the current version. It never goes stale.
-- **A Demonstration of skills**. Just like a traditional resume, my Resume Application *tells* the reader what I have done, where I have worked, and other important career-related information. In addition and beyond what a paper resume can do, this version also *shows* my skills, serving as a demostration application.
+- **A Demonstration of skills**. Just like a traditional resume, my Resume Application *tells* the reader what I have done, where I have worked, and other important career-related information. In addition and beyond what a paper resume can do, this version also *shows* my skills, serving as a demonstration application.
 - **Saves time**. Since the source code for the Resume Application is also available on [GitHub](https://github.com/glindsay65/resume), a preliminary technical review of my skills is available even before an interview is scheduled, saving everyone time. I said I know JavaScript, but what does my code really say about that?
 
 Unfortunately, old habits are difficult to unseat and more often than not I am expected to provide "a Word version" of my resume, regrdless of any other alternative I offer. As a result, I intend to also provide a link to such a version for those who insist on having it.
