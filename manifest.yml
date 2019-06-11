@@ -8,4 +8,6 @@ applications:
     - route: resume-fdc.mybluemix.net
     - route: resume.fastdogcoding.net
   disk_quota: 512M
-  buildpack: nodejs_buildpack
+  buildpacks:
+    - nodejs_buildpack
+
