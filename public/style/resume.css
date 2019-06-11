@@ -53,17 +53,30 @@ body {
 
 #goalsChart {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     margin: auto;
+    text-align: center;
 }
 
-svg text {
+#goalsChart svg text {
     font-size: 300%;
     font-family: inherit;
     font-weight: 500;
 }
 
-path {
+#goalsChart .legend text {
+    font-size: 100%;
+    font-weight: normal;
+    color: black;
+}
+
+#goalsChart .legend-box {
+    fill: white;
+    stroke: black;
+    opacity: 0.8;
+}
+
+#goalsChart path {
     fill: #ccc;
     stroke: #333;
     stroke-width: 2px;
@@ -71,10 +84,10 @@ path {
     transition-delay: 150ms;
 }
 
-path:hover {
+#goalsChart path:hover {
     fill: #999;
     stroke: #000;
-    transition-delay: 0;
+    transition-delay: 0ms;
 }
 
 div.chartTip {

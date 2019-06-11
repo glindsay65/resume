@@ -18,9 +18,9 @@
 
 // Required modules
 const express = require('express');
- const hbs = require('hbs');
- const cfenv = require('cfenv');
- const database = require('./database');
+const hbs = require('hbs');
+const cfenv = require('cfenv');
+const database = require('./database');
 
 // create a new express server
 let app = express();
@@ -36,45 +36,54 @@ database.init(appEnv, 'cloudant-resume-fdc');
 
 // set up handlebars view plugin (hbs)
 hbs.registerPartials(__dirname + '/views/partials', () => {
-  console.log('- Handlebars: partials loaded.');
+    console.log('- Handlebars: partials loaded.');
 });
 
 // Routes
 app.get('/', (req, res, next) => {
-  database.getResume('resume-default')
-    .then(resume => {
-      // console.log('Resume: ', resume);
-      res.status(200)
-        .render('layout', resume);
-    })
-    .catch(error => next(error));
+    database.getResume('resume-default')
+        .then(resume => {
+            // console.log('Resume: ', resume);
+            res.status(200)
+                .render('layout', resume);
+        })
+        .catch(error => next(error));
 });
 
 app.get('/chart', (req, res, next) => {
-  database.getDocument('chartData-goals')
-    .then(doc => {
-      res.status(200)
-        .json(doc.data);
-    })
-    .catch(error => next(error));
+    database.getDocument('chartData-goals')
+        .then(doc => {
+            res.status(200)
+                .json(doc.data);
+        })
+        .catch(error => next(error));
+});
+
+app.get('/data/:id', (req, res, next) => {
+    database.getDocument(req.params.id)
+        .then(doc => {
+            res.status(200)
+                .json(doc.skills);
+        })
+        .catch(error => next(error));
 });
 
 // Error handler
 app.use(function (err, req, res, next) {
-  if (res.headersSent) {
-    return next(err);
-  }
-  // err.name       = err.name || 'Error';
-  err.statusCode = err.statusCode || 500;
-  // err.message    = (err.message ? err.message : err.error);
-  console.dir(err);
+    if (res.headersSent) {
+        return next(err);
+    }
+    // err.name       = err.name || 'Error';
+    err.statusCode = err.statusCode || 500;
+    // err.message    = (err.message ? err.message : err.error);
+    console.dir(err);
 
-  // console.error(err);
-  res.status(err.statusCode)
-    .render('layout', err);
+    // console.error(err);
+    res.status(err.statusCode)
+        .render('layout', err);
 });
 
 // Start server on the specified port and binding host
 app.listen(appEnv.port || '3002', appEnv.bind, function () {
-  console.log("Started server listening at " + appEnv.url);
+    console.log("Started server listening at " + appEnv.url);
 });

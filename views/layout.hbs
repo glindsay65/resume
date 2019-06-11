@@ -38,7 +38,7 @@
 	Wow! Look at you. Checking out the source.
 
 	That's cool. I'm glad you cared enough to see what I did here. You're either
-	curious about building web pages or about me, in some hopefully healthy way.
+	curious about building web pages or about me (in some hopefully healthy way.)
 
 	What you see here is only part of the story. This page is rendered by a
 	node.js/express application and the handlebars.js library. The data is
@@ -77,7 +77,7 @@
 <!-- End: Header -->
 
 <!-- Start: Content -->
-<div class="container">
+<div class="container-fluid">
 	{{! If we have content, display that }}
 	{{#content}}
 		<div class="row">
@@ -106,7 +106,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
         crossorigin="anonymous"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="scripts/d3.legend.js"></script>
 <script src="scripts/chart.js"></script>
+<script src="scripts/scatter-plot.js"></script>
 </body>
 </html>
