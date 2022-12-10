@@ -26,7 +26,7 @@
   "dependencies": {
     "@cloudant/cloudant": "1.10.0",
     "cfenv": "1.2.2",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "font-awesome": "4.7.0",
     "hbs": "4.0.4"
   }
